@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhaskara</title>
+</head>
+
+<script>
+    function calculo() {
+        let valorA = document.getElementById("numA").value;
+        let valorB = document.getElementById("numB").value;
+        let valorC = document.getElementById("numC").value;
+
+
+        if(numA == ""){
+            alert(`Informe o valor A`);
+        } else if (numB == ""){
+            alert(`Informe o valor B`);
+        }
+        else if (numC == ""){
+            alert(`Informe o valor C`);
+        } else{
+            let soma =  
+
+
+        }
+        
+        
+        
+        
+    }
+    function limpar() {
+        document.getElementById("numA").value = "";
+        document.getElementById("numB").value = "";
+        document.getElementById("numC").value = "";
+        document.getElementById("resultado").value = "";
+
+    }
+
+</script>
+
+<body>
+    <div>
+        <label for="numA">Valor A</label>
+        <input type="number" id="numA">
+    </div>
+    <div>
+        <label for="numB">Valor B</label>
+        <input type="number" id="numB">
+    </div>
+    <div>
+        <label for="numC">Valor C</label>
+        <input type="number" id="numC">
+    </div>
+    <div>
+        <label for="resulatado">Resultado:</label>
+        <input type="number" id="resultado" disabled>
+    </div>
+
+    <div>
+        <input type="button" value="Calculo" onclick="calculo();">
+
+        <input type="button" value="Limpar" onclick="limpar();">
+    </div>
+</body>
+
+</html>
