@@ -14,14 +14,11 @@
         let valorC = document.getElementById("numC").value;
 
 
-        if (numA == "" || numA == 0) {
-            alert(`Informe o valor A`);
+        if (valorA == "" || valorB == "" || valorC == "" ) {
+            alert(`Informe os valores`);
         }
-        else if (numB == "") {
-            alert(`Informe o valor B`);
-        }
-        else if (numC == "") {
-            alert(`Informe o valor C`);
+        else if (valorA === "0") {
+            alert(`Informe o valor de A diferente de zero`);
         }
         else {
             let delta = Number(valorB) * Number(valorB) + (-4 * Number(valorA) * Number(valorC));
