@@ -14,28 +14,36 @@
         let valorC = document.getElementById("numC").value;
 
 
-        if(numA == ""){
+        if (numA == "" || numA == 0) {
             alert(`Informe o valor A`);
-        } else if (numB == ""){
+        }
+        else if (numB == "") {
             alert(`Informe o valor B`);
         }
-        else if (numC == ""){
+        else if (numC == "") {
             alert(`Informe o valor C`);
-        } else{
-            let soma =  nao sei o que estou fazendo
-
-
         }
-        
-        
-        
-        
+        else {
+            let delta = Number(valorB) * Number(valorB) + (-4 * Number(valorA) * Number(valorC));
+            let xLinha = (Number(-valorB) + Math.sqrt(delta)) / (2 * Number(valorA));
+            let x2Linha = (Number(-valorB) - Math.sqrt(delta)) / (2 * Number(valorA));
+            if (delta < 0) {
+                document.getElementById("resultado").innerHTML = "<p> Impossivel </p>";
+            }
+            else {
+                document.getElementById("resultado").innerHTML = ` <p> X' = ${xLinha} </p> <p> X'' = ${x2Linha} </p>`;
+            }
+        }
+
+
+
+
     }
     function limpar() {
         document.getElementById("numA").value = "";
         document.getElementById("numB").value = "";
         document.getElementById("numC").value = "";
-        document.getElementById("resultado").value = "";
+        document.getElementById().value = "";
 
     }
 
@@ -54,9 +62,8 @@
         <label for="numC">Valor C</label>
         <input type="number" id="numC">
     </div>
-    <div>
-        <label for="resulatado">Resultado:</label>
-        <input type="number" id="resultado" disabled>
+    <div id="resultado">
+
     </div>
 
     <div>
