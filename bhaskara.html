@@ -9,21 +9,21 @@
 
 <script>
     function calculo() {
-        let valorA = document.getElementById("numA").value;
-        let valorB = document.getElementById("numB").value;
-        let valorC = document.getElementById("numC").value;
+        let A = document.getElementById("numA").value;
+        let B = document.getElementById("numB").value;
+        let C = document.getElementById("numC").value;
 
 
-        if (valorA == "" || valorB == "" || valorC == "" ) {
-            alert(`Informe os valores`);
+        if (A == "" || B == "" || C == "" ) {
+            alert(`Informe os valores:`);
         }
-        else if (valorA === "0") {
-            alert(`Informe o valor de A diferente de zero`);
+        else if (A === "0") {
+            alert(`Informe um valor diferente de 0 para A `);
         }
         else {
-            let delta = Number(valorB) * Number(valorB) + (-4 * Number(valorA) * Number(valorC));
-            let xLinha = (Number(-valorB) + Math.sqrt(delta)) / (2 * Number(valorA));
-            let x2Linha = (Number(-valorB) - Math.sqrt(delta)) / (2 * Number(valorA));
+            let delta = Number(B) * Number(B) + (-4 * Number(A) * Number(C));
+            let xLinha = (Number(-B) + Math.sqrt(delta)) / (2 * Number(A));
+            let x2Linha = (Number(-B) - Math.sqrt(delta)) / (2 * Number(A));
             if (delta < 0) {
                 document.getElementById("resultado").innerHTML = "<p> Impossivel </p>";
             }
@@ -48,7 +48,7 @@
 
 <body>
     <div>
-        <label for="numA">Valor A</label>
+        <label for="numA">Valor de A:</label>
         <input type="number" id="numA">
     </div>
     <div>
